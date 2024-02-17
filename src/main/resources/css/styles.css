@@ -12,11 +12,11 @@
 }
 
 .authorTableOddRow {
-	text-align: center;
+	text-align: right;
 	background: none repeat scroll 0 0 #FFFFFFF;
 }
 
 .authorTableEvenRow {
-	text-align: center;
+	text-align: right;
 	background: none repeat scroll 0 0 #D3D3D3;
 }
