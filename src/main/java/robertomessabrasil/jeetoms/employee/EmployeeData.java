@@ -1,60 +1,46 @@
 package robertomessabrasil.jeetoms.employee;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
+import java.io.IOException;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+
+import org.apache.hc.client5.http.fluent.Request;
+import org.apache.hc.client5.http.fluent.Response;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @ManagedBean(name = "employeeData", eager = true)
 public class EmployeeData {
 
-	public List<Employee> getEmployees() throws ClassNotFoundException {
-		ResultSet rs = null;
-		PreparedStatement pst = null;
-		Connection con = getConnection();
-		String stm = "Select * from employee";
-		List<Employee> records = new ArrayList<>();
+	public List<Employee> getEmployees() throws ClassNotFoundException, IOException {
 
-		try {
-			pst = con.prepareStatement(stm);
-			pst.execute();
-			rs = pst.getResultSet();
+		String json = this.getEmployeesFromApi();
 
-			while (rs.next()) {
-				Employee employee = new Employee();
-				employee.setId(rs.getInt(1));
-				employee.setName(rs.getString(2));
-				records.add(employee);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return records;
+		List<Employee> employees = this.getEmployeesFromJson(json);
+
+		return employees;
 	}
 
-	public Connection getConnection() throws ClassNotFoundException {
-		Connection con = null;
-		String url = "jdbc:mysql://localhost:3306/edu";
-		String user = "root";
-		String password = "root";
+	private String getEmployeesFromApi() throws IOException {
 
-		try {
-			System.out.println("Trying to get connection...");
-			Class.forName("com.mysql.jdbc.Driver");  
-			con = DriverManager.getConnection(url, user, password);
-			System.out.println("Connection completed.");
-		} catch (SQLException ex) {
-			System.out.println(ex.getMessage());
-		}
+		final String url = FacesContext.getCurrentInstance().getExternalContext().getInitParameter("employeeApiUrl");
 
-		finally {
-		}
-		return con;
+		Response response = Request.get(url).execute();
+
+		return response.returnContent().asString();
+
+	}
+
+	private List<Employee> getEmployeesFromJson(String json) throws JsonMappingException, JsonProcessingException {
+
+		return new ObjectMapper().readValue(json, new TypeReference<List<Employee>>() {
+		});
+
 	}
 
 }
