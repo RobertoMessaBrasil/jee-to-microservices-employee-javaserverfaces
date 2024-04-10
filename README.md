@@ -13,15 +13,24 @@ To run the exemple you'll need:
 - jdk 17+
 - maven 3+
 - tomcat server 8+
+- mysql 5+
 
-employees example versions
+mysql table
+
+Create the following table in a database of yours and insert some data
+
+```
+CREATE TABLE `employee` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+```
 
 There are two versions of this example:
 
 1. Original (main branch)
 2. Migrated version to use api call (jeetoms branch)
-
-Install and Run
 
 Original version
 
