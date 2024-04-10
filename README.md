@@ -35,10 +35,11 @@ There are two versions of this example:
 Original version
 
 1. Clone the main branch
-2. Run mvn clean package
-3. Copy employee.war to your tomcat webapps
-4. Start up Tomcat
-5. Open a browser and go to yourtomcat/employee
+2. Change the authorization data in EmployeeData.java
+3. Run mvn clean package
+4. Copy employee.war to your tomcat webapps
+5. Start up Tomcat
+6. Open a browser and go to yourtomcat/employee
 
 Migrated version
 
