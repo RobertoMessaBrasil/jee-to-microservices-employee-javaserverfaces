@@ -45,6 +45,10 @@ Migrated version
 
 Obs.: the [https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api](https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api) microservice must be running before these steps are performed
 
+Youtube Tutorial
+
+[https://www.youtube.com/playlist?list=PLAI1xdOxR60MhPnVDvbvZWgCXysu81Dv9](https://www.youtube.com/playlist?list=PLAI1xdOxR60MhPnVDvbvZWgCXysu81Dv9)
+
 1. Clone the jeetoms branch
 2. Run mvn clean package
 3. Copy employee.war to your tomcat webapps
