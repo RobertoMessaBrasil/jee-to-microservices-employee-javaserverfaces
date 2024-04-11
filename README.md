@@ -37,9 +37,7 @@ Original version
 
 1. Clone the main branch
 2. Change the authorization data in EmployeeData.java
-3. Run mvn clean packageYoutube Tutorial
-
-https://www.youtube.com/playlist?list=PLAI1xdOxR60MhPnVDvbvZWgCXysu81Dv9
+3. Run mvn clean package
 4. Copy employee.war to your tomcat webapps
 5. Start up Tomcat
 6. Open a browser and go to yourtomcat/employee
@@ -54,4 +52,4 @@ Migrated version
 
 ### Youtube Tutorial
 
-[Migrating JEE to Microservices](https://www.youtube.com/playlist?list=PLAI1xdOxR60MhPnVDvbvZWgCXysu81Dv9){:target="_blank"}
+[Migrating JEE to Microservices](https://www.youtube.com/playlist?list=PLAI1xdOxR60MhPnVDvbvZWgCXysu81Dv9)
