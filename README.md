@@ -1,12 +1,12 @@
 ## JEE example application
 
-###About
+### About
 
 This is a JEE JSF example application. It it used to show how to convert a JEE JSF application to a Microservices based application.
 
 The system just renders an employee list from a Mysql database.
 
-#Requisites
+### Requisites
 
 To run the exemple you'll need:
 
@@ -15,7 +15,7 @@ To run the exemple you'll need:
 - tomcat server 8+
 - mysql 5+
 
-###Mysql table
+### Mysql table
 
 Create the following table in a database of yours and insert some data
 
@@ -26,7 +26,7 @@ CREATE TABLE `employee` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 ```
-###Install
+### Install
 
 There are two versions of this example:
 
@@ -54,6 +54,6 @@ Obs.: the [https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-a
 4. Start up Tomcat
 5. Open a browser and go to yourtomcat/employee
 
-###Youtube Tutorial
+### Youtube Tutorial
 
 [Migrating JEE to Microservices](https://www.youtube.com/playlist?list=PLAI1xdOxR60MhPnVDvbvZWgCXysu81Dv9)
