@@ -35,7 +35,7 @@ There are two versions of this example:
 
 Original version
 
-The [https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api](https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api) must be put to run before.
+The [https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api](https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api) microservice must be put to run before.
 
 1. Clone the main branch
 2. Change the authorization data in EmployeeData.java
