@@ -2,7 +2,7 @@
 
 ### About
 
-This is a JEE JSF example application. It it used to show how to convert a JEE JSF application to a Microservices based application.
+This is a JEE JSF example application. It is used to show how to convert a JEE JSF application to a Microservices based application.
 
 The system just renders an employee list from a Mysql database.
 
@@ -35,8 +35,6 @@ There are two versions of this example:
 
 Original version
 
-The [https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api](https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api) microservice must be put to run before.
-
 1. Clone the main branch
 2. Change the authorization data in EmployeeData.java
 3. Run mvn clean package
@@ -45,6 +43,8 @@ The [https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api](ht
 6. Open a browser and go to yourtomcat/employee
 
 Migrated version
+
+The [https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api](https://github.com/RobertoMessaBrasil/jee-to-microservices-employee-api) microservice must be put to run before.
 
 1. Clone the jeetoms branch
 2. Run mvn clean package
